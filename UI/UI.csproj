@@ -1,0 +1,400 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E18F1930-054A-4C04-BC67-4841264D9D6E}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>UI</RootNamespace>
+    <AssemblyName>UI</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AForge, Version=2.0.0.0, Culture=neutral, PublicKeyToken=c1db6ff4eaa06aeb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\AForge.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Controls, Version=2.0.0.0, Culture=neutral, PublicKeyToken=a8ac264d1dc6b9d9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\AForge.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Video, Version=2.0.0.0, Culture=neutral, PublicKeyToken=cbfb6e07d173c401, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\AForge.Video.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Video.DirectShow, Version=2.0.0.0, Culture=neutral, PublicKeyToken=61ea4348d43881b7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\AForge.Video.DirectShow.dll</HintPath>
+    </Reference>
+    <Reference Include="IrisSkin4, Version=2006.3.22.45, Culture=neutral, PublicKeyToken=127be25a6db25e07, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\IrisSkin4.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Speech" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="ThoughtWorks.QRCode, Version=1.0.3990.25764, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\ThoughtWorks.QRCode.dll</HintPath>
+    </Reference>
+    <Reference Include="zxing, Version=0.16.4.0, Culture=neutral, PublicKeyToken=4e88037ac681fe60, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\zxing.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AttendPeople.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AttendPeople.Designer.cs">
+      <DependentUpon>AttendPeople.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BrushFace.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BrushFace.Designer.cs">
+      <DependentUpon>BrushFace.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FaceBrush.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FaceBrush.Designer.cs">
+      <DependentUpon>FaceBrush.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FaceRegis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FaceRegis.Designer.cs">
+      <DependentUpon>FaceRegis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FaceRegister.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FaceRegister.Designer.cs">
+      <DependentUpon>FaceRegister.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManualInput.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManualInput.Designer.cs">
+      <DependentUpon>ManualInput.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MingYiPrivacyPolicy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MingYiPrivacyPolicy.Designer.cs">
+      <DependentUpon>MingYiPrivacyPolicy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TS_Mask.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TS_Mask.Designer.cs">
+      <DependentUpon>TS_Mask.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mask.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mask.Designer.cs">
+      <DependentUpon>Mask.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Web References\LS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\Test\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\WebNtit\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AttendPeople.resx">
+      <DependentUpon>AttendPeople.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BrushFace.resx">
+      <DependentUpon>BrushFace.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FaceBrush.resx">
+      <DependentUpon>FaceBrush.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FaceRegis.resx">
+      <DependentUpon>FaceRegis.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FaceRegister.resx">
+      <DependentUpon>FaceRegister.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManualInput.resx">
+      <DependentUpon>ManualInput.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MingYiPrivacyPolicy.resx">
+      <DependentUpon>MingYiPrivacyPolicy.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TS_Mask.resx">
+      <DependentUpon>TS_Mask.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mask.resx">
+      <DependentUpon>Mask.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="Properties\DataSources\System.Data.DataTable.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Web References\LS\LiShuiServer.wsdl" />
+    <None Include="Web References\LS\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\Test\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\Test\WSFaces.wsdl" />
+    <None Include="Web References\WebNtit\LiShuiServer.wsdl" />
+    <None Include="Web References\WebNtit\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://10.178.227.93:1109/LiShuiServer.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\WebNtit\</RelPath>
+      <UpdateFromURL>http://10.178.227.93:1109/LiShuiServer.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>UI_WebNtit_LiShuiServer</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://localhost:4862/LiShuiServer.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\LS\</RelPath>
+      <UpdateFromURL>http://localhost:4862/LiShuiServer.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>UI_jiami_LiShuiServer</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://localhost:4862/WSFaces.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\Test\</RelPath>
+      <UpdateFromURL>http://localhost:4862/WSFaces.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>UI_Test_WSFaces</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Web References\Test\WSFaces.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BLL\BLL.csproj">
+      <Project>{af586840-0306-4b77-8875-09d240d56cf5}</Project>
+      <Name>BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Core\Core.csproj">
+      <Project>{872df769-f9cf-4d2e-ae6c-b945cc94afe8}</Project>
+      <Name>Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Models\Models.csproj">
+      <Project>{f0627217-be8b-4c39-8236-fbddfc2cf53e}</Project>
+      <Name>Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WebServer\WebServer.csproj">
+      <Project>{2BFDBFD9-0140-46A7-8DC4-035D3B712DC5}</Project>
+      <Name>WebServer</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Img1.0\bg-01.jpg" />
+    <Content Include="Img1.0\jpg-01.png" />
+    <Content Include="Img1.0\jpg-02.png" />
+    <Content Include="Img1.0\姓名：身份证号：手机号：.png" />
+    <Content Include="Img1.0\姓身份证手机验证码.png" />
+    <Content Include="Img1.0\提示.png" />
+    <Content Include="Img1.0\正在认证中.......png" />
+    <Content Include="Img1.0\确认信息.png" />
+    <Content Include="Img1.0\获取身份证信息.png" />
+    <Content Include="Img1.0\获取验证码.png" />
+    <Content Include="Img1.0\返回首页.png" />
+    <Content Include="Img1.0\键盘\icon-00.png" />
+    <Content Include="Img1.0\键盘\icon-01.png" />
+    <Content Include="Img1.0\键盘\icon-02.png" />
+    <Content Include="Img1.0\键盘\icon-03.png" />
+    <Content Include="Img1.0\键盘\icon-04.png" />
+    <Content Include="Img1.0\键盘\icon-05.png" />
+    <Content Include="Img1.0\键盘\icon-06.png" />
+    <Content Include="Img1.0\键盘\icon-07.png" />
+    <Content Include="Img1.0\键盘\icon-08.png" />
+    <Content Include="Img1.0\键盘\icon-09.png" />
+    <Content Include="Img1.0\键盘\icon-hs.png" />
+    <Content Include="Img1.0\键盘\icon-qr.png" />
+    <Content Include="Img1.0\键盘\jpg-bg.png" />
+    <Content Include="img1.1\22.gif" />
+    <Content Include="img1.1\bg-01.jpg" />
+    <Content Include="img1.1\jpg-01.png" />
+    <Content Include="img1.1\jpg-02.png" />
+    <Content Include="img1.1\姓名：身份证号：手机号：验证码：.png" />
+    <Content Include="img1.1\提示.png" />
+    <Content Include="img1.1\明医隐私政策.png" />
+    <Content Include="img1.1\正在认证中.png" />
+    <Content Include="img1.1\温馨提示拷贝.png" />
+    <Content Include="img1.1\确认信息.png" />
+    <Content Include="img1.1\获取验证码.png" />
+    <Content Include="img1.1\读取身份证.png" />
+    <Content Include="img1.1\键盘\icon-00.png" />
+    <Content Include="img1.1\键盘\icon-01.png" />
+    <Content Include="img1.1\键盘\icon-02.png" />
+    <Content Include="img1.1\键盘\icon-03.png" />
+    <Content Include="img1.1\键盘\icon-04.png" />
+    <Content Include="img1.1\键盘\icon-05.png" />
+    <Content Include="img1.1\键盘\icon-06.png" />
+    <Content Include="img1.1\键盘\icon-07.png" />
+    <Content Include="img1.1\键盘\icon-08.png" />
+    <Content Include="img1.1\键盘\icon-09.png" />
+    <Content Include="img1.1\键盘\icon-hs.png" />
+    <Content Include="img1.1\键盘\icon-qr.png" />
+    <Content Include="img1.1\键盘\jpg-bg.png" />
+    <Content Include="img1.1\键盘小\icon-00.png" />
+    <Content Include="img1.1\键盘小\icon-01.png" />
+    <Content Include="img1.1\键盘小\icon-02.png" />
+    <Content Include="img1.1\键盘小\icon-03.png" />
+    <Content Include="img1.1\键盘小\icon-04.png" />
+    <Content Include="img1.1\键盘小\icon-05.png" />
+    <Content Include="img1.1\键盘小\icon-06.png" />
+    <Content Include="img1.1\键盘小\icon-07.png" />
+    <Content Include="img1.1\键盘小\icon-08.png" />
+    <Content Include="img1.1\键盘小\icon-09.png" />
+    <Content Include="img1.1\键盘小\icon-hs.png" />
+    <Content Include="img1.1\键盘小\icon-qr.png" />
+    <Content Include="img1.1\键盘小\jpg-bg.png" />
+    <Content Include="Img\20190124161517.png" />
+    <Content Include="Img\bg-01.png" />
+    <Content Include="Img\bg-02.jpg" />
+    <Content Include="Img\bg-02.png" />
+    <Content Include="Img\bg-03.jpg" />
+    <Content Include="Img\bg-05.png" />
+    <Content Include="Img\form-02.jpg" />
+    <Content Include="Img\icon-01.png" />
+    <Content Include="Img\icon-02.png" />
+    <Content Include="Img\icon-04.png" />
+    <Content Include="Img\icon-05.png" />
+    <Content Include="Img\icon-06.png" />
+    <Content Include="Img\icon-entry.jpg" />
+    <Content Include="Img\jpg-01.png" />
+    <Content Include="Img\logo1.ico" />
+    <Content Include="Img\ts-01.png" />
+    <Content Include="Img\ts-02.png" />
+    <Content Include="Img\ts-ok.png" />
+    <Content Include="Img\zfb.png" />
+    <Content Include="Img\图层5.png" />
+    <Content Include="Img\提示：请您摘去眼镜帽子并对准摄像头做脸部识别认证.png" />
+    <None Include="Resources\服务协议.png" />
+    <None Include="Resources\添加人像.png" />
+    <None Include="Resources\注册icon.png" />
+    <None Include="Resources\icon_checked mark.png" />
+    <None Include="Resources\icon_Unchecked.png" />
+    <None Include="Resources\验证码.png" />
+    <None Include="Resources\9-1注册.png" />
+    <None Include="Resources\明医刷脸就医系统.png" />
+    <None Include="Resources\9-1注册 %281%29.png" />
+    <None Include="Web References\WebNtit\LiShuiServer.disco" />
+    <None Include="Web References\LS\LiShuiServer.disco" />
+    <None Include="Resources\确认信息.png" />
+    <None Include="Resources\icon-qr.png" />
+    <None Include="Resources\icon-00.png" />
+    <None Include="Resources\icon-09.png" />
+    <None Include="Resources\icon-08.png" />
+    <None Include="Resources\icon-07.png" />
+    <None Include="Resources\获取验证码.png" />
+    <None Include="Resources\姓身份证手机验证码.png" />
+    <None Include="Resources\jpg-02.png" />
+    <None Include="Img\矩形9.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

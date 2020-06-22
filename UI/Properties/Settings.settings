@@ -1,0 +1,15 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="UI.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="UI_Test_WSFaces" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost:4862/WSFaces.asmx</Value>
+    </Setting>
+    <Setting Name="UI_jiami_LiShuiServer" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost:4862/LiShuiServer.asmx</Value>
+    </Setting>
+    <Setting Name="UI_WebNtit_LiShuiServer" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://10.178.227.93:1109/LiShuiServer.asmx</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

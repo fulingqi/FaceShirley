@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="CheckFacesMore">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="bytes" type="s:base64Binary" />
+            <s:element minOccurs="0" maxOccurs="1" name="keyCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CheckFacesMoreResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CheckFacesMoreResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UserInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="U" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UserInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UserInfoResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="JKK">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="KeyID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="JKKResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="JKKResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getJKK">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strSex" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Sidnum" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="OnePhone" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getJKKResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getJKKResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UserRegister">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="bytes" type="s:base64Binary" />
+            <s:element minOccurs="0" maxOccurs="1" name="Phone" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="IDno" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="RealName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="LoginPass" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="VerifyFlag" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="CardType" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="MedicareNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Address" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Healthcard" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UserRegisterResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UserRegisterResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="CheckFacesMoreSoapIn">
+    <wsdl:part name="parameters" element="tns:CheckFacesMore" />
+  </wsdl:message>
+  <wsdl:message name="CheckFacesMoreSoapOut">
+    <wsdl:part name="parameters" element="tns:CheckFacesMoreResponse" />
+  </wsdl:message>
+  <wsdl:message name="UserInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:UserInfo" />
+  </wsdl:message>
+  <wsdl:message name="UserInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:UserInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="JKKSoapIn">
+    <wsdl:part name="parameters" element="tns:JKK" />
+  </wsdl:message>
+  <wsdl:message name="JKKSoapOut">
+    <wsdl:part name="parameters" element="tns:JKKResponse" />
+  </wsdl:message>
+  <wsdl:message name="getJKKSoapIn">
+    <wsdl:part name="parameters" element="tns:getJKK" />
+  </wsdl:message>
+  <wsdl:message name="getJKKSoapOut">
+    <wsdl:part name="parameters" element="tns:getJKKResponse" />
+  </wsdl:message>
+  <wsdl:message name="UserRegisterSoapIn">
+    <wsdl:part name="parameters" element="tns:UserRegister" />
+  </wsdl:message>
+  <wsdl:message name="UserRegisterSoapOut">
+    <wsdl:part name="parameters" element="tns:UserRegisterResponse" />
+  </wsdl:message>
+  <wsdl:portType name="LiShuiServerSoap">
+    <wsdl:operation name="CheckFacesMore">
+      <wsdl:input message="tns:CheckFacesMoreSoapIn" />
+      <wsdl:output message="tns:CheckFacesMoreSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UserInfo">
+      <wsdl:input message="tns:UserInfoSoapIn" />
+      <wsdl:output message="tns:UserInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="JKK">
+      <wsdl:input message="tns:JKKSoapIn" />
+      <wsdl:output message="tns:JKKSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getJKK">
+      <wsdl:input message="tns:getJKKSoapIn" />
+      <wsdl:output message="tns:getJKKSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UserRegister">
+      <wsdl:input message="tns:UserRegisterSoapIn" />
+      <wsdl:output message="tns:UserRegisterSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="LiShuiServerSoap" type="tns:LiShuiServerSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="CheckFacesMore">
+      <soap:operation soapAction="http://tempuri.org/CheckFacesMore" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UserInfo">
+      <soap:operation soapAction="http://tempuri.org/UserInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="JKK">
+      <soap:operation soapAction="http://tempuri.org/JKK" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getJKK">
+      <soap:operation soapAction="http://tempuri.org/getJKK" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UserRegister">
+      <soap:operation soapAction="http://tempuri.org/UserRegister" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="LiShuiServerSoap12" type="tns:LiShuiServerSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="CheckFacesMore">
+      <soap12:operation soapAction="http://tempuri.org/CheckFacesMore" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UserInfo">
+      <soap12:operation soapAction="http://tempuri.org/UserInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="JKK">
+      <soap12:operation soapAction="http://tempuri.org/JKK" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getJKK">
+      <soap12:operation soapAction="http://tempuri.org/getJKK" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UserRegister">
+      <soap12:operation soapAction="http://tempuri.org/UserRegister" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="LiShuiServer">
+    <wsdl:port name="LiShuiServerSoap" binding="tns:LiShuiServerSoap">
+      <soap:address location="http://10.178.227.93:1109/LiShuiServer.asmx" />
+    </wsdl:port>
+    <wsdl:port name="LiShuiServerSoap12" binding="tns:LiShuiServerSoap12">
+      <soap12:address location="http://10.178.227.93:1109/LiShuiServer.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
